@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>Population Decline
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ country }} Population Data</title>
+</head>
+<body>
+  <h1>{{ country }} Population Data</h1>
+  
+  <table border="1">
+    <tr>
+      <th>Year</th>
+      <th>Crude Birth Rate (per 1000 people)</th>
+    </tr>
+    {% for row in data %}
+    <tr>
+      <td>{{ row[5] }}</td>
+      <td>{{ row[6] }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</body>
+</html>
