@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Country: Korea</title>
+</head>
+<body>
+  <h1>Country: Korea</h1>
+  
+  {% for row in rows %}
+    {% if row["country"] == "Korea" %}
+      <p>Korea: 
+         <b><a href={{ url_for('korea_details', id=row['id']) }}>{{ row["id"] }}</a></b> |  
+         {{ row[""] }} |
+         {{ row[""] }} |
+         {{ row[''] }}
+      </p>
+    {% endif %}
+  {% endfor %}
+</body>
+</html>
